@@ -82,9 +82,88 @@ a:focus{color:#666;outline:0}ul{padding:0;margin:0}body{background-color:#f2f2f2
         font-style: italic;
     }
 
-    /* task8 - editing p tag styles */
-    p {
+    /* task8 - applying styles to p tag in "What we do"-module */
+    .tm-content-box.flex-2-col > .pad > p {
         line-height: 200%;
         text-indent: 30px;
+    }
+
+    /* task9 - styling content block */
+    .heading > ol > li > a {
+        color: black;
+    }
+
+    .heading > ol > li > a:visited {
+        color: silver;
+    }
+
+    .heading > ol > li > a:hover {
+        color: blue;
+    }
+
+    .text::after {
+        content: "New";
+        vertical-align: super;
+        font-size: 12px;
+        color: red;
+    }
+
+    /* task10 - adding some styles to  */
+    .blocks > .tm-content-box > ul > .box-bg {
+        background-color: #f2f2f2;
+    }
+
+    .blocks > .tm-content-box > ul > li > div > p::first-letter {
+        color: black;
+    }
+
+    /* task11 - apply botom border to elemets in sidebar */
+    .tm-sidebar > nav > ul > li:not(:last-child) {
+        border-bottom: 1px solid silver;
+    }
+
+    /* task12 - add red text to inputs text and submit button in form */
+    input[type="text"] {
+        color:red;
+    }
+
+    .submit-btn {
+        color: red;
+    }
+}
+
+/* task13 - rebuilding layput */
+@media screen and (max-width: 1140px), screen and (max-height: 835px) {
+    body {
+        padding: 0;
+    }
+
+    .container{
+        padding: 0;
+        max-width: none;
+    }
+
+    .tm-sidebar {
+        position: sticky;
+        margin-bottom: 50px; 
+        width: 100%;
+    }
+
+    .tm-sidebar > nav {
+        padding: 0;
+    }
+
+    .tm-sidebar > nav > ul {
+        display: flex;
+    }
+
+    .tm-sidebar > nav > ul > li {
+        padding: 0;
+        border: none !important;
+    }
+    
+    .tm-main-content{
+        padding: 0;
+        margin: 0 20%;
     }
 }
