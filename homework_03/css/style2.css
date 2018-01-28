@@ -1,0 +1,92 @@
+body {
+  background-color: rgba(198, 238, 252, 0.53); }
+  body #content {
+    display: block;
+    max-width: 1000px;
+    margin: 1% auto;
+    background-color: #3b3b3b;
+    padding: 20px; }
+    body #content h1, body #content h2 {
+      color: #fccd10; }
+    body #content h1 {
+      text-align: center;
+      text-transform: uppercase; }
+    body #content p {
+      color: #ffffff; }
+    body #content .img-left {
+      float: left;
+      outline: 2px solid #fccd10;
+      outline-offset: 2px;
+      margin: 4px 20px 15px 4px; }
+    body #content .brief {
+      display: block;
+      float: none;
+      width: none;
+      padding: 20px;
+      margin: 0 0 45px 0;
+      background-color: #fff178; }
+    body #content .img-right {
+      float: right;
+      outline: 2px solid #fccd10;
+      outline-offset: 2px;
+      margin: 4px 4px 4px 20px; }
+    body #content a {
+      color: #f5c70f; }
+    body #content table {
+      margin-bottom: 40px;
+      border-spacing: 0; }
+      body #content table caption {
+        text-align: right; }
+      body #content table tr {
+        height: 40px;
+        background-color: #677d01; }
+        body #content table tr:first-child {
+          background-color: #94a34e;
+          border-bottom: none;
+          text-transform: uppercase; }
+          body #content table tr:first-child th {
+            padding-left: 20px;
+            text-align: left; }
+            body #content table tr:first-child th:not(:last-child) {
+              border-right: 1px solid #ffffff; }
+        body #content table tr td {
+          padding-left: 20px;
+          color: #ffffff;
+          border-bottom: 1px solid #94a34e; }
+    body #content ul {
+      padding-left: 0; }
+      body #content ul li {
+        list-style: none;
+        display: block;
+        padding-bottom: 15px; }
+        body #content ul li label {
+          color: #f5c70f; }
+        body #content ul li input {
+          height: 30px;
+          width: 100%;
+          margin-top: 10px;
+          padding-left: 5px;
+          color: #808080;
+          border: 1px solid #94a34e;
+          box-sizing: border-box; }
+          body #content ul li input[type="submit"] {
+            width: 240px;
+            height: 40px;
+            background-color: #3b3b3b;
+            color: #f5c70f;
+            border: 1px solid #f5c70f;
+            text-transform: uppercase; }
+        body #content ul li.user-name {
+          display: flex;
+          justify-content: space-between; }
+          body #content ul li.user-name p {
+            width: 49%;
+            margin: 0;
+            padding: 0; }
+        body #content ul li textarea {
+          width: 100%;
+          height: 160px;
+          margin-top: 10px;
+          padding-left: 5px;
+          box-sizing: border-box;
+          border: 1px solid #94a34e; }
