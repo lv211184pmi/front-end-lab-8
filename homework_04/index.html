@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS Layouts HW</title>
+  <!-- add fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600i">
+  <!-- add styles -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+      <div class="header-textbox">
+        <h1 class="heading-primary">
+          <span class="heading-primary-main">black 
+            <span class="heading-primary-main-big">&</span>white
+            <sup class="heading-primary-main-trade">tm</sup>
+          </span>
+          <span class="heading-primary-sub">an original brand since 1965</span>
+        </h1>
+      </div>
+      <button class="header-button">read more</button>
+    </header>
+    <main>
+      <!-- in the first section I want to implement layout with floats -->
+      <section class="description">
+        <div class="description-block">
+            <p class="lorem-big">Lorem ipsum dolor, consectetur adipiscing. Aenean <b>commodo ligula</b> eget dolor.</p>
+            <p class="lorem-small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes,
+              nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, 
+              pretium quis sem. Nulls consequat massa quis enim.
+            </p>
+        </div>
+      </section>
+      <!-- the second one will have CSS GRID layput -->
+      <section class="gallery-block">
+        <p>Read some of our <b>featured articles</b></p>
+        <div class="gallery-container">
+          <div class="gallery-container-item big-item-1">
+            <p>Januari '15 <b>South France</b></p>
+            <div class="likes-box">172 <span>&#9829;</span></div>
+          </div>
+          <div class="gallery-container-item small-item">
+            <p>Januari '15 <b>Budapest</b></p>
+            <div class="likes-box">112 <span>&#9829;</span></div>
+          </div>
+          <div class="gallery-container-item small-item">
+            <p>Januari '15 <b>Budapest</b></p>
+            <div class="likes-box">112 <span>&#9829;</span></div>
+          </div>
+          <div class="gallery-container-item big-item-2">
+            <p>Januari '15 <b>South America</b></p>
+            <div class="likes-box">313 <span>&#9829;</span></div>
+          </div>
+        </div>
+      </section>
+      <section class="search-block">
+        <div class="search-conrainer">
+            <p>Subscribe to our <b>newsletter</b></p>
+          <input type="text" placeholder="Enter your e-mail adress">
+          <button>Subscribe</button>
+        </div>
+      </section>
+    </main>
+</body>
+</html>
