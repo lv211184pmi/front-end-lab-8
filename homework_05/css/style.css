@@ -106,17 +106,20 @@ body {
         padding-bottom: 1rem; } }
     .main-content .main-content-article:hover {
       background-color: #39c2d7; }
-    .main-content .main-content-article img {
-      width: 100%;
-      height: auto; }
-      @media (max-width: 56.25em) {
-        .main-content .main-content-article img {
-          display: block;
-          width: 80%;
-          margin: 0 auto; } }
-    .main-content .main-content-article h4 {
-      padding: 1rem 0;
-      font-size: 1.8rem; }
+    .main-content .main-content-article a {
+      text-decoration: none;
+      color: #000; }
+      .main-content .main-content-article a img {
+        width: 100%;
+        height: auto; }
+        @media (max-width: 56.25em) {
+          .main-content .main-content-article a img {
+            display: block;
+            width: 80%;
+            margin: 0 auto; } }
+      .main-content .main-content-article a h4 {
+        padding: 1rem 0;
+        font-size: 1.8rem; }
 
 footer {
   width: 100%;
