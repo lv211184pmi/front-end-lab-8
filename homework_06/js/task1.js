@@ -9,7 +9,7 @@ let CountTriangle = (function() {
             numerizedValue = Number(numerizedValue);
         } else {
             console.log(`you entered wrong side: ${inpValue}`);
-            inpValue = "wrong side";
+            numerizedValue = "wrong side";
         }
         return numerizedValue;
     };
