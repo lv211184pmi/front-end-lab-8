@@ -1,55 +1,20 @@
-let CurrencyConvert = (function() {
-    let amountEUR = prompt("please enter euro amount:", "EUR");
-    let amountUSD = prompt("please enter usd amount:", "USD");
-    let EURcourse = 33.8565;
-    let USDcourse = 27.4609;
 
-    let validateAmount = (amount) => {
-        let numerizeAmount = parseFloat(amount);
-        if(!isNaN(numerizeAmount) && numerizeAmount > 0) {
-            numerizeAmount = Number(numerizeAmount);
-        } else {
-            console.log(`your amount is incorrect: ${amount}`);
-            numerizeAmount = "incorrect amount";
-        }
-        return numerizeAmount;
-    };
+let amountEUR = prompt("please enter euro amount:", "EUR");
+let amountUSD = prompt("please enter usd amount:", "USD");
 
-    let convertToEUR = (amountEUR) => {
-        let EURtoUAH;
-        EURtoUAH = (amountEUR * EURcourse).toFixed(2);
-        return EURtoUAH;
-    }
+let EURAmount = Number(amountEUR);
+let USDAmount = Number(amountUSD);
+let EURcourse = 33.8565;
+let USDcourse = 27.4609;
+let EURtoUAH, USDtoUAH, crossCourse;
 
-    let converTotUSD = (amountUSD) => {
-        let USDtoUAH;
-        USDtoUAH = (amountUSD * USDcourse).toFixed(2);
-        return USDtoUAH;
-    }
-
-    let countCrossCourse = (amountUSD, amountEUR) => {
-        let crossCourse;
-        crossCourse = (amountUSD/amountEUR).toFixed(2);
-        return crossCourse;
-    }
-
-    let count = () => {
-        let EUR = validateAmount(amountEUR);
-        let USD = validateAmount(amountUSD);
-        if (EUR !== "incorrect amount" && USD !== "incorrect amount") {
-            let EURconvert = convertToEUR(EUR);
-            let USDconvert = converTotUSD(USD);
-            let crossCourseAmount = countCrossCourse(EURcourse, USDcourse);
-            console.log(`for data: EUR:${EUR}  USD:${USD} 
-                ${EUR} euros are equal to ${EURconvert}UAH
-                ${USD} dollars are equal to ${USDconvert}UAH
-                1 EUR is equal ${crossCourseAmount} dollars`);
-        } else {
-            console.log(`incorrect data, check amounts you entered!`);
-        }
-    }
-
-    return {
-        count: count
-    }     
-})();
+if(!isNaN(EURAmount && USDAmount) && (EURAmount && USDAmount) > 0) {
+    EURtoUAH = (EURAmount * EURcourse).toFixed(2);
+    USDtoUAH = (USDAmount * USDcourse).toFixed(2);
+    crossCourse = (EURcourse/USDcourse).toFixed(2);
+    console.log(`For data: EUR:${amountEUR}  USD:${amountUSD} 
+                ${amountEUR} euros are equal to ${EURtoUAH}UAH, ${amountUSD} dollars are equal to ${USDtoUAH}UAH
+                1 EUR is equal ${crossCourse} dollars`);
+} else {
+    console.log(`For data ${amountEUR} ${amountUSD}: incorrect data`);
+}
