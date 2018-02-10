@@ -1,11 +1,11 @@
-
+const EURcourse = 33.8565;
+const USDcourse = 27.4609;
+// no modifications just for output in console
 let amountEUR = prompt("please enter euro amount:", "EUR");
 let amountUSD = prompt("please enter usd amount:", "USD");
 
 let EURAmount = Number(amountEUR);
 let USDAmount = Number(amountUSD);
-let EURcourse = 33.8565;
-let USDcourse = 27.4609;
 let EURtoUAH, USDtoUAH, crossCourse;
 
 if(!isNaN(EURAmount && USDAmount) && (EURAmount && USDAmount) > 0) {

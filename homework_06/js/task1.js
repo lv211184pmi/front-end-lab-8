@@ -1,4 +1,4 @@
-// declare variables for showing input values in console
+// declare variables just for showing input values in console
 let ASide = prompt("please enter side A length:", "");
 let BSide = prompt("please enter side B length:", "");
 let CSide = prompt("please enter side C length:", "");
@@ -6,8 +6,7 @@ let CSide = prompt("please enter side C length:", "");
 let sideA = Number(ASide);
 let sideB = Number(BSide);
 let sideC = Number(CSide);
-let triangleType, triangleSquare;
-let trianglePerimetr = (sideA + sideB + sideC)/2;
+let triangleType, trianglePerimetr, triangleSquare;
 
 if(!isNaN(sideA && sideB && sideC) && (sideA && sideB && sideC) > 0) {
     if(sideA == sideB && sideA == sideC && sideC == sideB) {
@@ -21,6 +20,7 @@ if(!isNaN(sideA && sideB && sideC) && (sideA && sideB && sideC) > 0) {
     } else {
         triangleType = "Scalene";
     }
+    trianglePerimetr = (sideA + sideB + sideC)/2;
     triangleSquare =  Math.sqrt(trianglePerimetr*(trianglePerimetr - sideA)*(trianglePerimetr - sideB )*(trianglePerimetr - sideC)).toFixed(2);
     if (!isNaN(triangleSquare) && triangleSquare != 0) {
         console.log(`For data ${ASide} ${BSide} ${CSide}: Type of triangle is ${triangleType} and square is ${triangleSquare}`);
