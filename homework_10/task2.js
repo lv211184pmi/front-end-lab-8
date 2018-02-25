@@ -32,29 +32,32 @@ function showResult(fighter) {
 }
 
 function fighter(inObj) {
-  let wins = 0,
-      loses = 0;
+  let fighterStat = {
+    wins: 0,
+    loses: 0
+  };
 
-  let getName = () => inObj.name;
+  let fighterData = inObj;
+
+  let getName = () => fighterData.name;
 
   let block = () => Math.random() >= 0.5;
 
-  let getStats = () => inObj;
+  let getStats = () => fighterData;
 
-  let getCombatHistory = () => {
-    return {wins: this.wins, loses: this.loses};
-  }
+  let getCombatHistory = () => fighterStat;
 
   let fight = (oponent) => {
-    let wasDamaged = oponent.hp;
     if(!oponent.block()){
-      oponent.getStats().hp -= this.getStats().attack;
+      oponent.getStats().hp -= getStats().attack;
       if(oponent.getStats().hp <= 0) {
-        oponent.loses +=1;
-        this.wins += 1;
+        oponent.getCombatHistory().loses +=1;
+        fighterStat.wins +=1;
       }
+      return true;
+    } else {
+      return false;
     }
-    return wasDamaged === oponent.hp;
   }
 
   return {
@@ -78,7 +81,7 @@ fighter1.fight(fighter2); // true, fighter 1 make damage to fighter 2
 fighter1.fight(fighter3); // true, fighter 1 make damage to fighter 3
 
 /**
- * Fighter John
+ * Fighter John 
  * - Combat stats: { wins: 1, loses: 0 }
  * - Properties: { name: 'John', attack: 100, hp: 100 }
  */
