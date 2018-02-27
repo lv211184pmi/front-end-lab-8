@@ -17,3 +17,11 @@ p {
     font-size: 14px;
     margin-left: 5px;
 }
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: inline;
+}
