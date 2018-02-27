@@ -1,5 +1,4 @@
 var rootNode = document.getElementById("root");
-console.log(rootNode.children[0]);
 
 let createNode = (iconType, title) => {
     let liEl = document.createElement('li');
@@ -15,9 +14,6 @@ let createNode = (iconType, title) => {
     aEl.addEventListener('click', toggleView);
     return liEl;
 }
-
-// rootNode.children[0].childNodes.className = "show";
-
 
 let TreeView = (inArr) => {
     let ulNode = document.createElement("ul");
@@ -44,7 +40,6 @@ let toggleView = () => {
     let parent = event.target.parentNode;
     let iToggle = parent.getElementsByTagName('i');
     if(iToggle[0].innerHTML === "folder" || "folder_open") {
-        console.log(iToggle[0]);
         switchView(iToggle[0], parent.nextSibling);
     }
 }
@@ -60,7 +55,3 @@ let switchView = (item, neighbour) => {
 }
 
 rootNode.appendChild(TreeView(structure));
-
-
-
-
