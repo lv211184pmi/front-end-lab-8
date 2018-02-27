@@ -1,2 +1,19 @@
 /* Your styles goes here */
+ul, li {
+    margin-top: 10px;
+    padding-left: 10px;
+}
 
+li {
+    list-style-type: none;
+}
+
+i {
+    color: orange;
+    font-size: 25px;
+}
+p {
+    display: inline;
+    font-size: 14px;
+    margin-left: 5px;
+}
